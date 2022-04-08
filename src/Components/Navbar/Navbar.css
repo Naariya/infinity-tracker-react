@@ -1,0 +1,33 @@
+#navbar {
+    height: 64px;
+    /* margin-left: 120px;
+    margin-right: 120px; */
+
+}
+.it-navbar {
+    display: flex;
+    background-color:rgb(220, 252, 241); 
+    justify-content: space-between;
+    height: 100%;
+}
+.nav-img {
+    display: flex;
+    align-items: center;
+    margin-left: 120px;
+}
+.nav-img p {
+    padding-left: 10px;
+    font-size: 24px;
+    color:rgb(21, 51, 78);
+}
+.nav-list {
+    display: flex;
+    align-items: center;
+    width: auto;
+    margin-right: 136px;
+}
+.nav-list a {
+    height: 64px;
+    align-items: center;
+    display: flex;
+}

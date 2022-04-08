@@ -1,0 +1,56 @@
+#activity {
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    width: 50%;
+}
+.ch-activity {
+    display: flex;
+    justify-content: space-between;
+    width: 130%;
+}
+.body-form {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Kanit', sans-serif;
+    font-size: 24px;
+}
+.form {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 32px;
+    flex-direction: column;
+    width: 50%;
+}
+.form-label {
+    display: flex;
+    margin-top: 36px;
+    justify-content: space-between;
+}
+.form-label input {
+    width: 200%;
+}
+.form-label textarea {
+    width: 200%;
+}
+.button {
+    display: flex;
+    justify-content: center;
+    margin: 36px;
+    width: 200px;
+    border: none;
+    border-radius: 12px;
+    background-color: rgb(170, 209, 245);
+    font-size: 24px;
+}
+.form-button {
+    display: flex;
+    justify-content: center;
+    padding: 0px 50px;
+    text-decoration: none;
+}
+.description {
+    height: 128px;
+    text-align: top left;
+}
