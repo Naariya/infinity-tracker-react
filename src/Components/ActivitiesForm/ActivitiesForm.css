@@ -24,15 +24,16 @@
     width: 50%;
 }
 .form-label {
-    display: flex;
-    margin-top: 36px;
-    justify-content: space-between;
+    margin-top: 16px;
 }
 .form-label input {
-    width: 200%;
+    display: flex;
+    margin-top: 8px;
+    width: 130%;
 }
 .form-label textarea {
-    width: 200%;
+    margin-top: 8px;
+    width: 130%;
 }
 .button {
     display: flex;

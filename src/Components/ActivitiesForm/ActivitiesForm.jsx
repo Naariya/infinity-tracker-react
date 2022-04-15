@@ -54,7 +54,7 @@ const ActivitiesForm = () => {
                 <div>
                     <label>Name </label>
                 </div>
-                <div>
+                <div className="form-input">
                     <input name="name" type="text" placeholder='Name' value={name} onChange={inputName}/>
                 </div>
             </div>
@@ -62,7 +62,7 @@ const ActivitiesForm = () => {
                 <div>
                     <label> Date </label>
                 </div>
-                <div>
+                <div className="form-input">
                     <input name="date" type="date" value={date} onChange={inputDate}/>
                 </div>
             </div>
@@ -70,7 +70,7 @@ const ActivitiesForm = () => {
                 <div>
                     <label> Duration </label>
                 </div>
-                <div>
+                <div className="form-input">
                     <input name="duration" type="text" placeholder='Please put the duration (HH:MM:SS)' value={duration} onChange={inputDuration}/>
                 </div>
             </div>
@@ -78,7 +78,7 @@ const ActivitiesForm = () => {
                 <div>
                     <label> Location </label>
                 </div>
-                <div>
+                <div className="form-input">
                     <input name="location" type="location" value={location} onChange={inputLocation}/>
                 </div>
             </div>
@@ -86,7 +86,7 @@ const ActivitiesForm = () => {
                 <div>
                     <label> Description </label>
                 </div>
-                <div>
+                <div className="form-input">
                     <textarea name="description" type="text" className="description" value={description} onChange={inputDescription} />
                 </div>
             </div>
