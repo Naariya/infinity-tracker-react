@@ -1,7 +1,12 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import Axios from 'axios';
 import './HistoryRecord.css';
 import Logo from '../Logo/Logo';
 import RecordDetail from '../RecordDetail/RecordDetail';
+
+const client = Axios.create({
+    baseURL: 'http://localhost:4000'
+})
 
 const HistoryRecord = () => {
 
@@ -25,7 +30,19 @@ const HistoryRecord = () => {
             location: 'Los Angeles, CA',
             description: 'swim swim swim',
         }]);
+    
+    useEffect(() => {
+        (async () => {
+            const response = await client.get('/records');
+            console.log(response.status);
+            console.log(response.data);
 
+            if (response.status === 200) {
+                setRecord(response.data)
+            }
+        })();
+    },[]);
+    
     const handleRemoveRecord = (e) => {
         const newRecord = [...records];
         newRecord.splice(openRecordId, 1);

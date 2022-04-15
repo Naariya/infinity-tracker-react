@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './ActivitiesForm.css';
 import Button from '../Button/Button';
 
@@ -34,6 +34,8 @@ const ActivitiesForm = () => {
       else {
     setDescription(e.target.value);}
   };
+
+  
 
     return (
         <div className="body-form">
@@ -71,7 +73,7 @@ const ActivitiesForm = () => {
                     <label> Duration </label>
                 </div>
                 <div className="form-input">
-                    <input name="duration" type="text" placeholder='Please put the duration (HH:MM:SS)' value={duration} onChange={inputDuration}/>
+                    <input name="duration" type="text" placeholder='Please put the duration (ex. 30 mins)' value={duration} onChange={inputDuration}/>
                 </div>
             </div>
             <div className="form-label">
