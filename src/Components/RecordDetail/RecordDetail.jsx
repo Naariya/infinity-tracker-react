@@ -1,12 +1,17 @@
 import { useState } from 'react';
 import "./RecordDetail.css";
-
+import moment from "moment-timezone"
+import UpdateDetail from "../UpdateRecord/UpdateRecord";
 
 const  RecordDetail = ({ recordData, setOpenDetail, setOpenRecordId, handleRemoveRecord}) => {
   
+  const [updateDetail, setUpdateDetail] = useState(false);
   
   return (
     <div className="recordDetailBackground">
+      {updateDetail &&
+                <UpdateDetail setUpdateDetail={setUpdateDetail} 
+                recordData={recordData}/>}
       <div className="recordDetailContainer">
         <div className="titleCloseBtn">
           <button
@@ -19,10 +24,10 @@ const  RecordDetail = ({ recordData, setOpenDetail, setOpenRecordId, handleRemov
         <div className="title"> 
           <h1>Activity Details</h1>
         </div>
-        <div className="body">
-         <p>Activity: {recordData.activity}</p>
+        <div className="body-modal">
+         <p>Activity: {recordData.activityName}</p>
          <p>Name: {recordData.name}</p>
-         <p>Date: {recordData.date}</p>
+         <p>Date: {moment(recordData.date).tz('Asia/Bangkok').format("DD MMM YYYY")}</p>
          <p>Duration: {recordData.duration}</p>
          <p>Location: {recordData.location}</p>
          <p>Description: {recordData.description}</p>
@@ -36,7 +41,14 @@ const  RecordDetail = ({ recordData, setOpenDetail, setOpenRecordId, handleRemov
             Close
           </button>
           <button
-            onClick={() => handleRemoveRecord(recordData.id)}
+            onClick={() => {
+              setUpdateDetail(true);
+            }}
+            id="updateBtn">
+            Update
+          </button>
+          <button
+            onClick={() => handleRemoveRecord(recordData._id)}
             id="deleteBtn">
             Delete
           </button>

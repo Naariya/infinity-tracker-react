@@ -1,5 +1,5 @@
 #activity {
-    font-family: 'Kanit', sans-serif;
+    font-family: 'Pangolin', cursive;
     font-size: 16px;
     width: 50%;
 }
@@ -13,7 +13,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Kanit', sans-serif;
+    font-family: 'Pangolin', cursive;
     font-size: 24px;
 }
 .form {
@@ -30,27 +30,25 @@
     display: flex;
     margin-top: 8px;
     width: 130%;
+    font-family: 'Pangolin', cursive;
 }
 .form-label textarea {
     margin-top: 8px;
     width: 130%;
+    font-family: 'Pangolin', cursive;
 }
-.button {
-    display: flex;
-    justify-content: center;
-    margin: 36px;
-    width: 200px;
+.button-form {
+    align-items: center;
     border: none;
     border-radius: 12px;
-    background-color: rgb(170, 209, 245);
+    background-color: rgb(170, 245, 220);
+    width: 200px;
+    height: 50px;
+    margin: 48px;
     font-size: 24px;
-}
-.form-button {
-    display: flex;
-    justify-content: center;
-    padding: 0px 50px;
-    text-decoration: none;
-}
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px;
+    cursor: pointer;
+  }
 .description {
     height: 128px;
     text-align: top left;

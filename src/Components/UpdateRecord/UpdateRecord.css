@@ -1,0 +1,112 @@
+.updateDetailBackground {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.updateDetailContainer {
+  width: 800px;
+  height: 600px;
+  border-radius: 18px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+
+.updateDetailContainer .title {
+  display: inline-block;
+  text-align: center;
+}
+
+.titleCloseBtn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.titleCloseBtn button {
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.updateDetailContainer .body {
+  flex: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.updateDetailContainer .footer {
+  flex: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.updateDetailContainer .footer button {
+  width: 150px;
+  height: 45px;
+  margin: 10px;
+  border: none;
+  background-color: cornflowerblue;
+  color: rgb(75, 73, 73);
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#closeButton {
+  background-color: rgb(146, 173, 255);
+  font-family: 'Pangolin', cursive;
+}
+
+#saveBtn {
+  background-color: rgb(146, 255, 217);
+  font-family: 'Pangolin', cursive;
+}
+
+.body-update {
+  display: flex;
+  justify-content: center;
+}
+
+.body-update p {
+  font-size: 20px;
+  margin-top: 1.5rem;
+}
+
+.formUpdate {
+  display: flex;
+  margin-top: 16px;
+  flex-direction: column;
+  width: 50%;
+}
+
+.ch-activity-1 label {
+  font-size: 22px;
+  padding-right: 2em;
+}
+
+.update-form-label {
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+.update-form-label input {
+  display: flex;
+  margin-top: 8px;
+  width: 100%;
+  font-family: 'Pangolin', cursive;
+}
+.update-form-label textarea {
+  margin-top: 8px;
+  width: 100%;
+  font-family: 'Pangolin', cursive;
+}

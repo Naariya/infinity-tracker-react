@@ -8,7 +8,7 @@ const ActivitiesHistory = () => {
     <div>
         <Navbar />
         <div className="body">
-        <HistoryList />
+        {/* <HistoryList /> */}
         <HistoryRecord />
         </div>
     </div>

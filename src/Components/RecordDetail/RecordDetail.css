@@ -65,12 +65,25 @@
   
   #closeBtn {
     background-color: rgb(146, 255, 217);
+    font-family: 'Pangolin', cursive;
+  }
+
+  #updateBtn {
+    background-color: rgb(246, 230, 153);
+    font-family: 'Pangolin', cursive;
   }
 
   #deleteBtn {
     background-color: rgb(252, 110, 110);
+    font-family: 'Pangolin', cursive;
   }
 
-  .body p {
+  .body-modal {
+    display: flex;
+    flex-direction: column;
+    margin-left: 75px;
+  }
+  .body-modal p {
     font-size: 20px;
+    margin-top: 1.5rem;
   }
