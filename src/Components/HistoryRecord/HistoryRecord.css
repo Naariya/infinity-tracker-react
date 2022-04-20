@@ -54,3 +54,47 @@
     cursor: pointer;
     padding-right: 16px;
 }
+
+.swal2-styled.swal2-confirm {
+    border: 0;
+    border-radius: 0.25em;
+    background: initial;
+    font-family: 'Pangolin', cursive;
+    font-size: 1em;
+    background-color:  rgb(76 188 192);
+}
+
+.swal2-styled.swal2-cancel {
+    border: 0;
+    border-radius: 0.25em;
+    background: initial;
+    font-family: 'Pangolin', cursive;
+    font-size: 1em;
+    background-color: #a4db86;
+}
+.swal2-title {
+    position: relative;
+    max-width: 100%;
+    margin: 0;
+    padding: 0.8em 1em 0;
+    color: rgb(90 109 112);
+    font-size: 1.875em;
+    font-weight: 600;
+    text-align: center;
+    text-transform: none;
+    word-wrap: break-word;
+}
+.swal2-html-container {
+    z-index: 1;
+    justify-content: center;
+    margin: 1em 1.6em 0.3em;
+    padding: 0;
+    overflow: auto;
+    color: rgb(102 143 149);
+    font-size: 1.125em;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    word-wrap: break-word;
+    word-break: break-word;
+}

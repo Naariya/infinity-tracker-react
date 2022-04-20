@@ -2,7 +2,7 @@ import { useState } from 'react';
 import "./UpdateRecord.css";
 import axios from 'axios';
 import moment from "moment-timezone";
-import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2'
 
 const UpdateDetail = ({ recordData, setUpdateDetail, reFetch }) => {
 
@@ -12,7 +12,6 @@ const UpdateDetail = ({ recordData, setUpdateDetail, reFetch }) => {
   const [duration, setDuration] = useState(recordData.duration);
   const [location, setLocation] = useState(recordData.location);
   const [description, setDescription] = useState(recordData.description);
-  const navigate = useNavigate();
 
   const chooseActivity = (e) => {
     setValue(e.target.value);
@@ -41,18 +40,39 @@ const UpdateDetail = ({ recordData, setUpdateDetail, reFetch }) => {
     }
   };
 
-  const handleUpdateRecord = async (e) => {
+  const handleUpdateRecord = (e) => {
     e.preventDefault();
-    const res = await axios.put(`http://localhost:4000/records/${recordData._id}`, {
-      activityName: value,
-      name: name,
-      date: date,
-      duration: duration,
-      location: location,
-      description: description,
-    });
-    setUpdateDetail(false);
-    reFetch();
+    Swal.fire({
+      title: 'Want to update?',
+      text: "Please be careful when updating a records!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: 'rgb(252, 110, 110)',
+      cancelButtonColor: 'rgb(63 208 157)',
+      confirmButtonText: 'Yes, update it!',
+      color: 'rgb(102, 85, 85)',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Updated!',
+          'Your Record has been updated.',
+          'success'
+        );
+        const res = axios.put(`http://localhost:4000/records/${recordData._id}`, {
+          activityName: value,
+          name: name,
+          date: date,
+          duration: duration,
+          location: location,
+          description: description,
+        });
+        reFetch();
+        setUpdateDetail(false);
+      }
+      if (!result.isConfirmed) {
+        setUpdateDetail(false);
+      }
+    })
     
   };
 

@@ -4,6 +4,7 @@ import axios from 'axios';
 import './ActivitiesForm.css';
 import Button from '../Button/Button';
 import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 
 const ActivitiesForm = () => {
@@ -52,8 +53,15 @@ const ActivitiesForm = () => {
             location: location,
             description: description,
         });
-        navigate('history');
-    }
+        Swal.fire({
+            icon: 'success',
+            title: 'Success.',
+            text: 'Congrats! your record has been successfully saved',
+          }).then((result) => {
+            if (result.isConfirmed) {
+                navigate('history');
+            }
+    })};
     
 
     return (
