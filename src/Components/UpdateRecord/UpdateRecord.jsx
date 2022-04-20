@@ -43,7 +43,7 @@ const UpdateDetail = ({ recordData, setUpdateDetail, reFetch }) => {
   const handleUpdateRecord = (e) => {
     e.preventDefault();
     Swal.fire({
-      title: 'Want to update?',
+      title: 'Update?',
       text: "Please be careful when updating a records!",
       icon: 'warning',
       showCancelButton: true,
