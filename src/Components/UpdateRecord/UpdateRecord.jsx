@@ -40,40 +40,26 @@ const UpdateDetail = ({ recordData, setUpdateDetail, reFetch }) => {
     }
   };
 
-  const handleUpdateRecord = (e) => {
+  const handleUpdateRecord = async (e) => {
     e.preventDefault();
+    await axios.put(`http://localhost:4000/records/${recordData._id}`, {
+      activityName: value,
+      name: name,
+      date: date,
+      duration: duration,
+      location: location,
+      description: description,
+    });
     Swal.fire({
-      title: 'Update?',
-      text: "Please be careful when updating a records!",
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: 'rgb(252, 110, 110)',
-      cancelButtonColor: 'rgb(63 208 157)',
-      confirmButtonText: 'Yes, update it!',
-      color: 'rgb(102, 85, 85)',
+      icon: 'success',
+      title: 'Updated.',
+      text: 'Congrats! your record has been successfully updated',
     }).then((result) => {
       if (result.isConfirmed) {
-        Swal.fire(
-          'Updated!',
-          'Your Record has been updated.',
-          'success'
-        );
-        const res = axios.put(`http://localhost:4000/records/${recordData._id}`, {
-          activityName: value,
-          name: name,
-          date: date,
-          duration: duration,
-          location: location,
-          description: description,
-        });
         reFetch();
-        setUpdateDetail(false);
-      }
-      if (!result.isConfirmed) {
-        setUpdateDetail(false);
+        setUpdateDetail(false)
       }
     })
-    
   };
 
   return (
