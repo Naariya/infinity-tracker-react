@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from 'axios';
 import './ActivitiesForm.css';
 import Button from '../Button/Button';
+import { useNavigate } from 'react-router-dom';
 
 
 const ActivitiesForm = () => {
@@ -12,6 +13,7 @@ const ActivitiesForm = () => {
     const [duration, setDuration] = useState('');
     const [location, setLocation] = useState('');
     const [description, setDescription] = useState('');
+    const navigate = useNavigate();
 
     const chooseActivity = (e) => {
         setValue(e.target.value);
@@ -50,8 +52,7 @@ const ActivitiesForm = () => {
             location: location,
             description: description,
         });
-        <Link to="/" />
-        return;
+        navigate('history');
     }
     
 

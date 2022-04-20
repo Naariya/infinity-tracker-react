@@ -10,7 +10,7 @@ const HistoryRecord = () => {
 
     const [openDetail, setOpenDetail] = useState(false);
     const [openRecordId, setOpenRecordId] = useState(null);
-    const [records, setRecord] = useAllRecords();
+    const [records, setRecord, reFetch] = useAllRecords();
     
     const handleRemoveRecord = (id) => {
         const newRecord = [...records];
@@ -25,7 +25,7 @@ const HistoryRecord = () => {
             {openDetail &&
                 <RecordDetail setOpenDetail={setOpenDetail}
                     recordData={records[openRecordId]}
-                    handleRemoveRecord={handleRemoveRecord} />}
+                    handleRemoveRecord={handleRemoveRecord} reFetch={reFetch}/>}
             <table className="history-table">
                 {records.map(({ id, activityName, name, date, duration, location, description }, index) => (
                     <div key={id}>

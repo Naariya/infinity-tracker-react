@@ -20,6 +20,7 @@
     display: inline-block;
     text-align: center;
     margin-top: 10px;
+    color: rgb(96 95 95);
   }
   
   .titleCloseBtn {
@@ -57,7 +58,7 @@
     margin: 10px;
     border: none;
     background-color: cornflowerblue;
-    color: rgb(75, 73, 73);
+    color: rgb(102, 85, 85);
     border-radius: 8px;
     font-size: 20px;
     cursor: pointer;
@@ -86,4 +87,5 @@
   .body-modal p {
     font-size: 20px;
     margin-top: 1.5rem;
+    color: rgb(121 91 107);
   }

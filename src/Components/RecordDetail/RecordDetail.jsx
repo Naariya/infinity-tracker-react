@@ -3,7 +3,7 @@ import "./RecordDetail.css";
 import moment from "moment-timezone"
 import UpdateDetail from "../UpdateRecord/UpdateRecord";
 
-const  RecordDetail = ({ recordData, setOpenDetail, setOpenRecordId, handleRemoveRecord}) => {
+const  RecordDetail = ({ recordData, setOpenDetail, reFetch, handleRemoveRecord,}) => {
   
   const [updateDetail, setUpdateDetail] = useState(false);
   
@@ -11,7 +11,7 @@ const  RecordDetail = ({ recordData, setOpenDetail, setOpenRecordId, handleRemov
     <div className="recordDetailBackground">
       {updateDetail &&
                 <UpdateDetail setUpdateDetail={setUpdateDetail} 
-                recordData={recordData}/>}
+                recordData={recordData} reFetch={reFetch}/>}
       <div className="recordDetailContainer">
         <div className="titleCloseBtn">
           <button
