@@ -23,7 +23,7 @@ const HistoryRecord = () => {
             cancelButtonColor: 'rgb(63 208 157)',
             confirmButtonText: 'Yes, delete it!',
             color: 'rgb(102, 85, 85)',
-        }).then( async (result) => {
+        }).then(async (result) => {
             if (result.isConfirmed) {
                 Swal.fire(
                     'Deleted!',
