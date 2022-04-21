@@ -23,7 +23,7 @@ const HistoryRecord = () => {
             cancelButtonColor: 'rgb(63 208 157)',
             confirmButtonText: 'Yes, delete it!',
             color: 'rgb(102, 85, 85)',
-        }).then((result) => {
+        }).then( async (result) => {
             if (result.isConfirmed) {
                 Swal.fire(
                     'Deleted!',
@@ -32,7 +32,7 @@ const HistoryRecord = () => {
                 );
                 const newRecord = [...records];
                 newRecord.splice(openRecordId, 1);
-                axios.delete(`http://localhost:4000/records/${id}`);
+                await axios.delete(`http://localhost:4000/records/${id}`);
                 setRecord(newRecord)
                 setOpenDetail(false);
             }
