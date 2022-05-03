@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react';
-import { Link } from "react-router-dom";
+import { useState } from 'react';
 import axios from 'axios';
 import './ActivitiesForm.css';
 import Button from '../Button/Button';
