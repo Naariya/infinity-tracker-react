@@ -45,7 +45,7 @@ const ActivitiesForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const res = await axios.post('http://localhost:4000/records', {
+        const res = await axios.post('https://infinity-tracker-backend.vercel.app/records', {
             activityName: value,
             name: name,
             date: date,

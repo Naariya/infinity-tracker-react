@@ -42,7 +42,7 @@ const UpdateDetail = ({ recordData, setUpdateDetail, reFetch }) => {
 
   const handleUpdateRecord = async (e) => {
     e.preventDefault();
-    await axios.put(`http://localhost:4000/records/${recordData._id}`, {
+    await axios.put(`https://infinity-tracker-backend.vercel.app/records/${recordData._id}`, {
       activityName: value,
       name: name,
       date: date,

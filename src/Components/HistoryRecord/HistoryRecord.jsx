@@ -32,7 +32,7 @@ const HistoryRecord = () => {
                 );
                 const newRecord = [...records];
                 newRecord.splice(openRecordId, 1);
-                await axios.delete(`http://localhost:4000/records/${id}`);
+                await axios.delete(`https://infinity-tracker-backend.vercel.app/records/${id}`);
                 setRecord(newRecord)
                 setOpenDetail(false);
             }
